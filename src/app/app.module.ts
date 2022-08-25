@@ -9,6 +9,8 @@ import { AddIssueComponent } from './components/add-issue/add-issue.component';
 import { EditIssueComponent } from './components/edit-issue/edit-issue.component';
 import { IssueListComponent } from './components/issue-list/issue-list.component';
 
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { IssueListComponent } from './components/issue-list/issue-list.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [BugService],
   bootstrap: [AppComponent]

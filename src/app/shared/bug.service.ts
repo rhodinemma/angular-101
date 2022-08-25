@@ -31,7 +31,7 @@ export class BugService {
   }
 
   // GET
-  GetIssue(id: string): Observable<Bug> {
+  GetIssue(id: any): Observable<Bug> {
     return this.http
       .get<Bug>(this.baseurl + '/bugtracking/' + id)
       .pipe(retry(1), catchError(this.errorHandl));
@@ -43,7 +43,7 @@ export class BugService {
       .pipe(retry(1), catchError(this.errorHandl));
   }
   // PUT
-  UpdateBug(id: string, data: any): Observable<Bug> {
+  UpdateBug(id: any, data: any): Observable<Bug> {
     return this.http
       .put<Bug>(
         this.baseurl + '/bugtracking/' + id,
